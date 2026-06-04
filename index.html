@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《Python程序设计》课程智能助教 / 学伴</title>
+  <meta name="description" content="《Python程序设计》课程智能助教/学伴——以学生为中心，融入OBE理念，通过AI赋能实现从传统教学到数智化教学的转型。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap');
+    * { font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif; }
+    html { scroll-behavior: smooth; }
+    .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+    .code-deco { position: absolute; font-family: 'Courier New', monospace; font-size: 0.55rem; line-height: 1.6; color: rgba(48, 105, 152, 0.12); pointer-events: none; user-select: none; }
+    @keyframes float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .float-anim { animation: float-slow 6s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 antialiased">
+
+  <!-- HERO -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-white to-cyan-500/5"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
+    <div class="code-deco right-[8%] top-24 float-anim" style="text-align:left">
+      def hello():<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Hello, Python!")<br>&nbsp;&nbsp;&nbsp;&nbsp;return 42
+    </div>
+    <div class="code-deco left-[8%] bottom-20 float-anim" style="animation-delay:3s; text-align:left">
+      import numpy as np<br><br>data = np.array([1,2,3])<br>mean = np.mean(data)
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6 pb-20 pt-24 sm:pb-28 sm:pt-32 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <div class="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          《Python程序设计》智能教学升级
+        </div>
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 bg-clip-text text-transparent">Python程序设计</span>
+          <br />
+          <span class="text-slate-800">课程智能助教 / 学伴</span>
+        </h1>
+        <p class="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-slate-600 sm:text-xl">
+          以 AI 大语言模型为驱动，融合 OBE 成果导向教育理念，
+          打造「学生为中心」的编程学习智能伙伴，让 Python 学习更高效、更有趣、更个性。
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="#overview" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:scale-[1.02]">了解更多
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#qrcode" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 hover:shadow-md">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
+            访问入口
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 一、智能助教/学伴概述 -->
+  <section id="overview" class="relative py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- 开篇 -->
+      <div class="fade-in-up mx-auto max-w-4xl">
+        <div class="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-cyan-50 p-8 sm:p-10">
+          <div class="flex items-start gap-4">
+            <svg class="mt-1 w-8 h-8 shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">智能助教 / 学伴 是什么？</h3>
+              <p class="mt-3 leading-relaxed text-slate-700">
+                《Python程序设计》课程智能助教/学伴是基于 AI 大语言模型开发的编程学习智能辅助工具。
+                它就像一位 <strong class="text-blue-700">24小时在线的学长/学姐</strong>，
+                随时随地陪伴学生学 Python——解答语法疑问、纠正代码错误、推荐练习题目、记录学习进展。
+                目的是解决传统编程教学中
+                <strong class="text-blue-700">学生基础差异大、课后无人答疑、练习反馈慢、容易放弃</strong>
+                等核心问题。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1. 开发缘由 -->
+      <div class="fade-in-up mt-16">
+        <div class="mb-6 flex items-center gap-3">
+          <span class="flex w-8 h-8 items-center justify-center rounded-lg bg-red-100 text-sm font-bold text-red-600">1</span>
+          <h3 class="text-2xl font-bold text-slate-900">开发缘由——解决什么问题？</h3>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50/50 p-5">
+            <div class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">学生基础差异大，老师顾不过来</h4>
+              <p class="mt-1 text-sm text-slate-600">同一个班级中，有零基础新生也有编程爱好者，统一进度难以兼顾所有人。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50/50 p-5">
+            <div class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">课后没人答疑，代码报错没人帮</h4>
+              <p class="mt-1 text-sm text-slate-600">课后遇到Python语法报错、运行异常，找不到人指导，问题越积越多。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50/50 p-5">
+            <div class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">练习少、反馈慢、容易放弃</h4>
+              <p class="mt-1 text-sm text-slate-600">编程需要大量练习，但作业提交后反馈周期长，学生无法及时知道对错。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50/50 p-5">
+            <div class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-red-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">写作业/上机没人实时指导</h4>
+              <p class="mt-1 text-sm text-slate-600">上机实践时遇到卡点无人及时点拨，学习效率低，挫败感强。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 功能特点 -->
+      <div class="fade-in-up mt-16">
+        <div class="mb-6 flex items-center gap-3">
+          <span class="flex w-8 h-8 items-center justify-center rounded-lg bg-blue-100 text-sm font-bold text-blue-600">2</span>
+          <h3 class="text-2xl font-bold text-slate-900">功能特点——它能干啥？</h3>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">随时答疑</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Python语法、代码报错、作业思路——遇到问题随时提问，智能助教即时解答。</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">代码纠错</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">粘贴你的代码，助教帮你找出Bug、分析错误原因、给出修改建议。</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">练习题库</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">基础语法题、综合案例题、小项目实战——分层次、分章节的练习体系。</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">知识点讲解</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">变量、循环、函数、模块……每个知识点都有清晰讲解与配套示例。</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">学习记录</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">做了多少题、错在哪里、薄弱知识点——学习数据全记录，复习有方向。</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:-translate-y-1 hover:shadow-lg hover:border-blue-200 transition-all">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <h4 class="mt-5 text-lg font-semibold text-slate-900">反馈与提升</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">每次练习即时反馈，错题自动归集，举一反三，从不会到熟练。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 在课程里的作用 -->
+      <div class="fade-in-up mt-16">
+        <div class="mb-6 flex items-center gap-3">
+          <span class="flex w-8 h-8 items-center justify-center rounded-lg bg-emerald-100 text-sm font-bold text-emerald-600">3</span>
+          <h3 class="text-2xl font-bold text-slate-900">在课程里的作用</h3>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">帮老师</h4>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-blue-400"></span>减轻课后答疑负担</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-blue-400"></span>辅助作业批改与辅导</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-blue-400"></span>释放精力用于教学设计创新</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-emerald-100 bg-white p-6 shadow-sm">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">帮学生</h4>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-emerald-400"></span>随时学、随时练、随时问</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-emerald-400"></span>降低编程入门难度与门槛</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-emerald-400"></span>获得即时、个性化的学习反馈</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-violet-100 bg-white p-6 shadow-sm">
+            <div class="flex w-12 h-12 items-center justify-center rounded-xl bg-violet-100 text-violet-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">补短板</h4>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-violet-400"></span>课后、假期也能持续学</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-violet-400"></span>机房之外的学习场景全覆盖</li>
+              <li class="flex items-start gap-2 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-violet-400"></span>缩小基础差异，不让一个同学掉队</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 二、赋能教学的理念 -->
+  <section class="relative py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="fade-in-up mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">赋能教学的理念与思路</h2>
+        <p class="mt-4 text-lg text-slate-600">以「学生为中心」和「OBE 成果导向教育」为核心理念，驱动课程从传统教学向数智化教学全面转型</p>
+      </div>
+
+      <div class="fade-in-up mt-16 grid gap-8 lg:grid-cols-3">
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+          <div class="flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-md">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900">以学生为中心</h3>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>尊重个体差异，提供自适应学习内容</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>支持自主探究与个性化学习节奏</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>关注每个学生学会什么、能做什么</li>
+          </ul>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+          <div class="flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white shadow-md">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900">OBE 成果导向</h3>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>明确课程能力目标与学习成果</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>反向设计教学内容与评价体系</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>以"能独立写Python代码"为核心标准</li>
+          </ul>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-lg">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-violet-500 to-purple-500"></div>
+          <div class="flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 text-white shadow-md">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900">数智化转型</h3>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>AI赋能实现教学全流程数字化</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>数据驱动精准教学决策</li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-slate-400"></span>突破传统教学的时空局限</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 转型路径 -->
+      <div class="fade-in-up mt-20">
+        <h3 class="mb-10 text-center text-2xl font-bold text-slate-900">从传统教学到数智化教学的转型路径</h3>
+        <div class="relative grid gap-6 lg:grid-cols-4">
+          <div class="absolute top-12 left-[12.5%] right-[12.5%] hidden h-0.5 bg-gradient-to-r from-slate-200 via-blue-300 to-blue-500 lg:block"></div>
+          <div class="relative flex flex-col items-center text-center">
+            <div class="flex w-24 h-24 items-center justify-center rounded-full bg-slate-400 text-2xl font-bold text-white shadow-lg ring-4 ring-white">01</div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">传统教学</h4>
+            <p class="mt-1 text-sm text-slate-500">老师讲、学生听<br>课后没人管</p>
+            <span class="mt-1 inline-block rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-600">被动学</span>
+          </div>
+          <div class="relative flex flex-col items-center text-center">
+            <div class="flex w-24 h-24 items-center justify-center rounded-full bg-blue-400 text-2xl font-bold text-white shadow-lg ring-4 ring-white">02</div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">信息化教学</h4>
+            <p class="mt-1 text-sm text-slate-500">课件数字化<br>在线题库</p>
+            <span class="mt-1 inline-block rounded-full bg-blue-50 px-3 py-0.5 text-xs font-medium text-blue-600">半主动学</span>
+          </div>
+          <div class="relative flex flex-col items-center text-center">
+            <div class="flex w-24 h-24 items-center justify-center rounded-full bg-blue-500 text-2xl font-bold text-white shadow-lg ring-4 ring-white">03</div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">数字化教学</h4>
+            <p class="mt-1 text-sm text-slate-500">MOOC/SPOC<br>数据采集分析</p>
+            <span class="mt-1 inline-block rounded-full bg-blue-50 px-3 py-0.5 text-xs font-medium text-blue-600">半主动学</span>
+          </div>
+          <div class="relative flex flex-col items-center text-center">
+            <div class="flex w-24 h-24 items-center justify-center rounded-full bg-cyan-500 text-2xl font-bold text-white shadow-lg ring-4 ring-white">04</div>
+            <h4 class="mt-4 text-lg font-semibold text-slate-900">数智化教学</h4>
+            <p class="mt-1 text-sm text-slate-500">AI助教24h陪伴<br>个性化辅导</p>
+            <span class="mt-1 inline-block rounded-full bg-cyan-50 px-3 py-0.5 text-xs font-medium text-cyan-600">主动学·精准学</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in-up mt-16">
+        <div class="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-8 sm:p-10">
+          <div class="flex items-start gap-4">
+            <svg class="mt-1 w-8 h-8 shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900">理念核心：用智能助教，把旧课升级成「更关注学生、更智能、更高效」的新课</h3>
+              <p class="mt-4 leading-relaxed text-slate-700">传统《Python程序设计》课程的模式是<strong class="text-slate-900">「老师讲、学生听、课后没人管」</strong>，学生处于被动学习状态。</p>
+              <p class="mt-3 leading-relaxed text-slate-700">引入智能助教/学伴后，课程升级为<strong class="text-blue-700">「AI 24小时陪伴、个性化辅导、实时反馈」</strong>的数智化教学新模式。让学生从<strong class="text-slate-900">「听不懂、写不出」</strong>成长为<strong class="text-emerald-700">「能独立写 Python 代码」</strong>。</p>
+              <p class="mt-3 leading-relaxed text-slate-700">这一转型围绕<strong class="text-blue-700">「以学生为中心」</strong>和<strong class="text-blue-700">「OBE 成果导向」</strong>展开——关注每个学生学会了什么，让教育回归<strong class="text-slate-900">「让每位学生都获得成长」</strong>的本质。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三、链接与二维码 -->
+  <section id="qrcode" class="relative py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="fade-in-up mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">立即体验智能学伴</h2>
+        <p class="mt-4 text-lg text-slate-600">扫描二维码或点击下方链接，即刻开启你的 Python 智能学习之旅</p>
+      </div>
+      <div class="fade-in-up mt-12">
+        <div class="mx-auto max-w-lg rounded-2xl border border-slate-200 bg-white p-8 shadow-lg text-center">
+          <div class="flex justify-center">
+            <div id="qrcode-container" class="inline-block rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5"></div>
+          </div>
+          <div class="mt-6">
+            <p class="text-sm font-medium text-slate-500">网页地址</p>
+            <a id="page-link" href="#" target="_blank" class="mt-2 inline-flex items-center gap-2 text-lg font-semibold text-blue-600 underline decoration-blue-300 underline-offset-4 hover:text-blue-800">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span id="page-url">加载中...</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white py-10">
+    <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+      <div class="flex items-center justify-center gap-2 text-slate-700">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        <span class="text-sm font-medium">《Python程序设计》课程智能助教 / 学伴</span>
+      </div>
+      <p class="mt-2 text-xs text-slate-400">以学生为中心 · 成果导向 · 持续改进</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+      const url = window.location.href;
+      document.getElementById('page-url').textContent = url;
+      document.getElementById('page-link').href = url;
+      new QRCode(document.getElementById('qrcode-container'), {
+        text: url, width: 200, height: 200,
+        colorDark: '#1E293B', colorLight: '#FFFFFF',
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    })();
+  </script>
+</body>
+</html>
