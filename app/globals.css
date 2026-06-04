@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in-up {
+  will-change: transform, opacity;
+}
